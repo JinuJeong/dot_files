@@ -56,3 +56,4 @@ syntax on
 filetype plugin indent on
 
 map <F8> :TagbarToggle<CR>
+set pastetoggle=<F2>
