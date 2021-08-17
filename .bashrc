@@ -119,3 +119,4 @@ export PATH=$PATH:/home/jinu/workspace/triton-inference-server/clients/bin
 #export PATH=$PATH:/usr/local/qemu-4.1.0/x86_64-softmmu/ 
 
 bind 'set bell-style none'
+alias python_ctags="ctags -R --fields=+l --languages=python --python-kinds=-iv -f tags ./"
