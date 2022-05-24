@@ -56,3 +56,7 @@ syntax on
 filetype plugin indent on
 
 map <F8> :TagbarToggle<CR>
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+autocmd BufWinEnter * match Error /\%>80v.\+\|\s\+$\|^\s*\n\+\%$/
