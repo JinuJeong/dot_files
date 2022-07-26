@@ -23,6 +23,10 @@ set tabstop=2
 au BufRead,BufNewFile *.py set expandtab
 au BufRead,BufNewFile *.c set expandtab
 au BufRead,BufNewFile *.cpp set expandtab
+au BufRead,BufNewFile *.cc set expandtab
+au BufRead,BufNewFile *.cu set expandtab
+au BufRead,BufNewFile *.h set expandtab
+
 set ruler " 현재 커서 위치 표시
 set incsearch
 set statusline=\ %<%l:%v\ [%P]%=%a\ %h%m%r\ %F\

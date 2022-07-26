@@ -79,43 +79,20 @@ set_prompts() {
     export PS1
 }
 
-
 export CLICOLOR=1
 alias ls='ls --color="auto"'
-
-
-export HADOOP_HOME=/home/jinu/hadoop/hadoop-2.7.7
-export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
-export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"
-export HADOOP_PREFIX="/home/jinu/hadoop/hadoop-2.7.7"
-export PATH=$PATH:$HADOOP_PREFIX/bin
-export PATH=$PATH:$HADOOP_PREFIX/sbin
-export HADOOP_MAPRED_HOME=${HADOOP_PREFIX}
-export HADOOP_COMMON_HOME=${HADOOP_PREFIX}
-export HADOOP_HDFS_HOME=${HADOOP_PREFIX}
-export HADOOP_CLASSPATH=${JAVA_HOME}lib/tools.jar
-
-export YARN_HOME=${HADOOP_PREFIX}
-export PATH=$PATH:/home/jinu/tools/
-
-export SPARK_HOME=/home/jinu/spark/spark-2.4.3-bin-hadoop2.7
-export PATH=$PATH:$SPARK_HOME/bin
 
 source ~/.cuda_set.sh
 
 set_prompts
 unset set_prompts
 
-#conda activate cuda
-
-alias pip='python -m pip'
+#alias pip='python -m pip'
 export TEST_TMPDIR=/tmp/bazel
 
-# perf_client
-export PATH=$PATH:/home/jinu/workspace/triton-inference-server/clients/bin
+alias python_ctags="ctags -R --fields=+l --languages=python --python-kinds=-iv -f tags ./"
+alias cpp_ctags="ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ ./"
 
-#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/include
-#export PATH=$PATH:/usr/local/qemu-4.1.0/
-#export PATH=$PATH:/usr/local/qemu-4.1.0/x86_64-softmmu/ 
 
-bind 'set bell-style none'
+#echo 'GOVERNOR="performance"' | sudo tee /etc/default/cpufrequtils
+#sudo systemctl disable ondemand
